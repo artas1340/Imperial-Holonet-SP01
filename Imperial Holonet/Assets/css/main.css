@@ -154,3 +154,102 @@ footer .wrap {
   .grid { flex-direction: column; }
   .aside { width: 100%; flex: none; }
 }
+/* Obecné rozložení pro vnitřní stránky */
+.page {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Panel / box – lze použít i na jiných stránkách */
+.panel {
+  background: var(--panel);
+  border: 1px solid #1d2632;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Uvítací box na novinkách */
+.news-intro h2 {
+  margin-top: 0;
+}
+
+/* Mřížka článků – dva sloupce */
+.articles-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Karta článku */
+.news-card {
+  background: #0e141d;
+  border-radius: 10px;
+  border: 1px solid #1d2632;
+  padding: 16px;
+}
+.news-card h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+.news-card time {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+.news-card p {
+  color: var(--muted);
+}
+
+/* Responsivní chování – na menších displejích 1 sloupec */
+@media (max-width: 880px) {
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== ČLÁNKY – DETAIL ===== */
+
+.article-page {
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+}
+
+.article-header {
+  margin-bottom: 18px;
+}
+
+.article-title {
+  font-size: 1.8rem;
+  margin: 0 0 4px 0;
+}
+
+.article-meta {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.article-summary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.article-body {
+  margin-top: 20px;
+}
+
+.article-body p {
+  margin: 0 0 1rem 0;
+  color: var(--text);
+  text-align: justify;
+}
+
+/* Menší obrazovky – trochu zmenšit nadpis */
+@media (max-width: 600px) {
+  .article-title {
+    font-size: 1.5rem;
+  }
+}

@@ -28,27 +28,116 @@
             </nav>
         </div>
     </header>
-    <main id="content" role="main">
-        <div class="wrap">
-            <nav class="breadcrumbs" aria-label="Drobečková navigace">
-            <a href="../index.html">Imperiální holonet</a>
-            <span class="breadcrumb-separator" aria-hidden="true">›</span>
-            <span>Novinky</span>
-            </nav>
-            <section>
-                <h2>Novinky</h2>
-                <p>Oficiální informační uzel pro aktuální dění v Impériu.</p>
-                <ul>
-                    <li><a href="Articles/index.html">Články</a></li>
-                    <li><a href="Archive/index.html">Archiv</a></li>
-                </ul>
-            </section>
-        </div>
-    </main>
-    <footer role="contentinfo">
-        <div class="wrap">
-            <p>&copy; Imperiální pozůstatek — Holonet</p>
-        </div>
-    </footer>
+      <main id="content" role="main">
+    <div class="page">
+      <nav class="breadcrumbs" aria-label="Drobečková navigace">
+        <a href="/">Domů</a> › <span>Novinky</span>
+      </nav>
+
+      <!-- Uvítací box -->
+      <section class="panel news-intro" aria-labelledby="news-heading">
+        <h2 id="news-heading">Holonetové novinky</h2>
+        <p>
+          V této sekci naleznete oficiální holonetové zpravodajství Imperiálního pozůstatku. 
+          Každý článek je ověřený příslušnou složkou – od flotilových štábů přes armádní velení 
+          až po zpravodajské analýzy ISB a IMIN. Pro detailní informace otevřete celý článek 
+          pomocí jeho názvu.
+        </p>
+      </section>
+
+      <!-- Dvou-sloupcový seznam článků -->
+      <section class="articles-grid" aria-label="Seznam novinek">
+        <article class="news-card">
+          <h3>
+            <a href="./Articles/0001-deklarace-vudce.html">
+              Provozní protokol: Sektor OB-7 stabilizován
+            </a>
+          </h3>
+          <time datetime="2025-11-12">12. 11. 2025</time>
+          <p>
+            Po sérii hyperprostorových poruch byla obnovena plná funkčnost relé v sektoru OB-7.
+            Lodní provoz je opět veden standardními koridory, civilní doprava však zůstává pod 
+            zvýšeným dohledem flotily.
+          </p>
+        </article>
+
+        <article class="news-card">
+          <h3>
+            <a href="/news/articles/0002-reorganizace-stormtrooper-legii.html">
+              Reorganizace stormtrooperských legií
+            </a>
+          </h3>
+          <time datetime="2025-11-05">5. 11. 2025</time>
+          <p>
+            V rámci programu standardizace pozůstatkových sil dochází k přečíslování legií, 
+            sloučení poddimenzovaných praporů a zavedení nových výcvikových protokolů 
+            pro boj v městském prostředí.
+          </p>
+        </article>
+
+        <article class="news-card">
+          <h3>
+            <a href="/news/articles/0001-deklarace-vudce.html">
+              Deklarace vůdce o jednotě sektorů
+            </a>
+          </h3>
+          <time datetime="2025-10-28">28. 10. 2025</time>
+          <p>
+            Vůdce Imperiálního pozůstatku vydává prohlášení k další koordinaci flotil, 
+            logistiky a bezpečnostních složek ve Vnějším okraji. Dokument potvrzuje závazek 
+            chránit obchodní trasy a loajální světy.
+          </p>
+        </article>
+
+        <article class="news-card">
+          <h3>
+            <a href="/news/articles/0004-evakuace-kolonie-nad-kessel.html">
+              Řízená evakuace kolonie v systému Kessel
+            </a>
+          </h3>
+          <time datetime="2025-10-21">21. 10. 2025</time>
+          <p>
+            Těžební kolonie v systému Kessel je dočasně vyklizena kvůli nestabilitě tamních 
+            gravitačních polí. Imperiální holonet přináší časový plán evakuačních konvojů 
+            a seznam schválených dopravců.
+          </p>
+        </article>
+
+        <article class="news-card">
+          <h3>
+            <a href="/news/articles/0005-nova-dokovaci-pravidla-corellia.html">
+              Nová dokovací pravidla pro corelliánské loděnice
+            </a>
+          </h3>
+          <time datetime="2025-10-15">15. 10. 2025</time>
+          <p>
+            Corelliánské loděnice zavádějí aktualizovaný dokovací řád. Posádky jsou povinny 
+            nahrát letové plány do holonetu nejméně šest hodin před vstupem do orbitální zóny, 
+            jinak hrozí automatické zpoždění procedur.
+          </p>
+        </article>
+
+        <article class="news-card">
+          <h3>
+            <a href="/news/articles/0006-program-obnovy-infrastruktury.html">
+              Program obnovy imperiální infrastruktury
+            </a>
+          </h3>
+          <time datetime="2025-10-01">1. 10. 2025</time>
+          <p>
+            Administrativa spouští dlouhodobý program opravy holonetových stožárů, orbitálních 
+            stanic a přístavních zařízení. Prioritu mají světy se strategickými zásobami 
+            a klíčové uzly mezisektorové logistiky.
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrap">
+      <p>&copy; Imperiální pozůstatek — Holonet</p>
+    </div>
+  </footer>
 </body>
 </html>
