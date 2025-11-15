@@ -35,8 +35,6 @@ header {
   z-index: 10;
 }
 header .wrap {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 12px 16px;
   display: flex;
   align-items: center;
@@ -69,9 +67,6 @@ main {
 .aside {
   width: 320px;
   flex: 0 0 320px;
-  background: var(--panel);
-  border: 1px solid #1d2632;
-  border-radius: 12px;
   padding: 16px;
 }
 .aside h2 {
@@ -80,9 +75,6 @@ main {
 }
 .article-card {
   padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #1d2632;
-  background: #0e141d;
   margin-bottom: 12px;
 }
 .article-card time {
@@ -96,10 +88,27 @@ main {
 }
 .content {
   flex: 1 1 auto;
+  padding: 24px;
+}
+
+/* Spolecne tmave panely */
+.content,
+.panel,
+.aside,
+.section-nav {
   background: var(--panel);
   border: 1px solid #1d2632;
   border-radius: 12px;
-  padding: 24px;
+}
+
+/* Jednotny vzhled karet */
+.article-card,
+.news-card,
+.notice-card,
+.admin-box {
+  background: #0e141d;
+  border-radius: 10px;
+  border: 1px solid #1d2632;
 }
 
 /* Drobečková navigace */
@@ -163,9 +172,6 @@ footer .wrap {
 
 /* Panel / box – lze použít i na jiných stránkách */
 .panel {
-  background: var(--panel);
-  border: 1px solid #1d2632;
-  border-radius: 12px;
   padding: 24px;
 }
 
@@ -184,9 +190,6 @@ footer .wrap {
 
 /* Karta článku */
 .news-card {
-  background: #0e141d;
-  border-radius: 10px;
-  border: 1px solid #1d2632;
   padding: 16px;
 }
 .news-card h3 {
@@ -251,5 +254,123 @@ footer .wrap {
 @media (max-width: 600px) {
   .article-title {
     font-size: 1.5rem;
+  }
+}
+/* ===== ADMINISTRATIVA – LAYOUT V RÁMCI SLOŽKY ===== */
+
+.section-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Levý sloupec – navigace v rámci složky */
+.section-nav {
+  width: 260px;
+  flex: 0 0 260px;
+  padding: 16px;
+}
+.section-nav h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+.section-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+.section-nav li + li {
+  margin-top: 6px;
+}
+.section-nav a {
+  display: block;
+  padding: 6px 8px;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.section-nav a:hover {
+  background: #0e141d;
+}
+.section-nav a[aria-current="page"] {
+  background: #0e141d;
+  border: 1px solid var(--accent);
+}
+
+/* Pravý obsahový box */
+.section-main {
+  flex: 1 1 auto;
+}
+
+/* Vývěsní tabule – boxy oznámení */
+.notice-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.notice-card {
+  padding: 16px;
+}
+.notice-card h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+.notice-card time {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+.notice-card p {
+  color: var(--muted);
+}
+
+/* Struktura – obrázek a dvousloupcové boxy */
+.structure-figure {
+  margin: 20px 0;
+}
+.structure-figure img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #1d2632;
+}
+.structure-figure figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.structure-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.admin-box {
+  padding: 16px;
+}
+.admin-box h4 {
+  margin-top: 0;
+  font-size: 1.02rem;
+}
+.admin-box p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* Responsivní úpravy – na menších displejích pod sebe */
+@media (max-width: 880px) {
+  .section-layout {
+    flex-direction: column;
+  }
+  .section-nav {
+    width: 100%;
+    flex: none;
+  }
+  .structure-grid {
+    grid-template-columns: 1fr;
   }
 }

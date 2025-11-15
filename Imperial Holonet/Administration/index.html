@@ -29,27 +29,65 @@
         </div>
     </header>
     <main id="content" role="main">
-        <div class="wrap">
-            <nav class="breadcrumbs" aria-label="Drobečková navigace">
-            <a href="../index.html">Imperiální holonet</a>
-            <span class="breadcrumb-separator" aria-hidden="true">›</span>
-            <span>Administrativa</span>
-            </nav>
-            <section>
-                <h2>Administrativa</h2>
-                <p>Hlavní administrativní složky Impéria a jejich agenda.</p>
-                <ul>
-                    <li><a href="About/index.html">O administrativě</a> — Základní přehled úřadu.</li>
-                    <li><a href="Notice-board/index.html">Vývěska</a> — Aktuálně platné směrnice.</li>
-                    <li><a href="Structure/index.html">Struktura</a> — Organizační schéma administrativy.</li>
-                </ul>
-            </section>
-        </div>
-    </main>
-    <footer role="contentinfo">
-        <div class="wrap">
-            <p>&copy; Imperiální pozůstatek — Holonet</p>
-        </div>
-    </footer>
+    <div class="page">
+      <nav class="breadcrumbs" aria-label="Drobečková navigace">
+        <a href="./index.html">Domů</a> › <span>Administrativa</span>
+      </nav>
+
+      <div class="section-layout">
+        <!-- Levý navigační sloupec v rámci Administrativy -->
+        <aside class="section-nav" aria-label="Navigace v rámci Administrativy">
+          <h2>Administrativa</h2>
+          <nav aria-label="Podstránky Administrativy">
+            <ul>
+              <li><a href="./index.html" aria-current="page">Přehled</a></li>
+              <li><a href="./About/index.html">About</a></li>
+              <li><a href="./Notice-board/index.html">Noticeboard</a></li>
+              <li><a href="./Structure/index.html">Structure</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <!-- Pravý obsah -->
+        <section class="section-main">
+          <div class="panel">
+            <h2>Úvod do Administrativy</h2>
+            <p>
+              Administrativa je páteřní civilní orgán imperiálního pozůstatku, který zajišťuje,
+              aby rozhodnutí velení, flotily, armády i bezpečnostních složek byla přeložena do
+              konkrétních nařízení, směrnic a provozních pravidel pro světy a sektory. Z této
+              sekce holonetu spravují úřední rady rozpočty, přidělení zdrojů, licencování
+              korporací, koordinaci přístavních úřadů i provoz civilní infrastruktury – od
+              energetických sítí až po holonetová relé v periferních systémech.
+            </p>
+            <p>
+              Úvodní stránka Administrativy slouží jako rozcestník: nahoře v levém sloupci
+              najdete odkazy na přehlednou stránku About, která popisuje úkoly a pravomoci
+              této organizace, na vývěsní tabuli s aktuálními vyhláškami a oznámeními a také
+              na strukturu, kde je zaneseno členění oddělení, klíčové osoby a kontaktní uzly.
+              Pokud jste guvernér, správce přístavu, zástupce registrované korporace nebo
+              vedoucí civilní instituce, je toto vaše hlavní rozhraní pro komunikaci s
+              imperiální správou.
+            </p>
+            <p>
+              Administrativa koordinuje svou činnost s ISB a IMIN, aby bylo zajištěno, že
+              vydávané předpisy jsou nejen legální a bezpečné, ale také prakticky proveditelné
+              v konkrétních podmínkách jednotlivých světů. Holonet je v tomto ohledu
+              klíčovým nástrojem – všechny zásadní změny v licencování, tarifech, daňových
+              režimech či dopravních omezeních se zde ukládají jako trvale dohledatelná
+              oznámení, na která mohou lokální administrátoři přímo odkazovat ve svých
+              interních systémech.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrap">
+      <p>&copy; Imperiální pozůstatek — Holonet</p>
+    </div>
+  </footer>
 </body>
 </html>
