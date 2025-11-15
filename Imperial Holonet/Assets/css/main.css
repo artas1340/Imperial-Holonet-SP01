@@ -1,49 +1,77 @@
 :root {
-  --bg:#0b0f14;
-  --panel:#121923;
-  --text:#e6eef7;
-  --muted:#a7b2c2;
-  --accent:#c8a96b;
+  /* Imperiální paleta */
+  --bg: #050608;          /* hlavní pozadí – skoro černé */
+  --panel: #111319;       /* panely / boxy */
+  --text: #e5e5e5;        /* hlavní text */
+  --muted: #a0a4b0;       /* utlumený text */
+  --accent: #d4af37;      /* zlatá – akcent */
+  --accent-red: #8b0000;  /* tmavě červená – imperiální linka */
 }
 
 /* Reset a základ */
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 .wrap {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
 }
+
 body {
   margin: 0;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial;
-  background: var(--bg);
+  font-family: "Eurostile", "Orbitron", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  background: radial-gradient(circle at top, #141824 0, var(--bg) 55%);
   color: var(--text);
   line-height: 1.6;
 }
+
+/* Odkazy */
+
 a {
   color: var(--accent);
   text-decoration: none;
 }
-a:hover { text-decoration: underline; }
 
-/* Hlavička */
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Hlavička (horní lišta) */
+
 header {
-  background: #0f1620;
-  border-bottom: 1px solid #1d2632;
+  background: #06070b;
+  border-bottom: 2px solid var(--accent-red);
   position: sticky;
   top: 0;
   z-index: 10;
 }
+
 header .wrap {
   padding: 12px 16px;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
+  justify-content: space-between;
 }
+
 h1 {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
+
+h1 a {
+  color: var(--accent);
+}
+
+h1 a:hover {
+  color: #ffffff;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -53,94 +81,133 @@ nav ul {
   flex-wrap: wrap;
 }
 
+nav ul li a {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+nav ul li a:hover {
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--accent);
+}
+
 /* Layout */
+
 main {
   max-width: 1200px;
   margin: 24px auto;
   padding: 0 16px;
 }
+
 .grid {
   display: flex;
   gap: 24px;
   align-items: flex-start;
 }
+
+/* Levý aside – např. výpis článků */
+
 .aside {
   width: 320px;
   flex: 0 0 320px;
   padding: 16px;
 }
-.aside h2 {
-  margin-top: 0;
-  font-size: 1.1rem;
-}
-.article-card {
-  padding: 12px;
-  margin-bottom: 12px;
-}
-.article-card time {
-  display: block;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-.article-card p {
-  color: var(--muted);
-  margin: .4rem 0 0;
-}
-.content {
-  flex: 1 1 auto;
-  padding: 24px;
-}
 
-/* Spolecne tmave panely */
+/* Společné panely / boxy */
+
 .content,
 .panel,
 .aside,
 .section-nav {
   background: var(--panel);
-  border: 1px solid #1d2632;
-  border-radius: 12px;
+  border: 1px solid #2a313f;
+  border-radius: 10px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
 }
 
-/* Jednotny vzhled karet */
+.aside h2 {
+  margin-top: 0;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.article-card {
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.article-card time {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.article-card p {
+  color: var(--muted);
+  margin: 0.4rem 0 0;
+}
+
+.content {
+  flex: 1 1 auto;
+  padding: 24px;
+}
+
+/* Jednotný vzhled karet (tmavší uvnitř panelů) */
+
 .article-card,
 .news-card,
 .notice-card,
 .admin-box {
-  background: #0e141d;
-  border-radius: 10px;
-  border: 1px solid #1d2632;
+  background: #090b11;
+  border-radius: 8px;
+  border: 1px solid #262c38;
 }
 
 /* Drobečková navigace */
+
 .breadcrumbs {
   color: var(--muted);
-  font-size: .95rem;
+  font-size: 0.9rem;
   margin-bottom: 8px;
   display: flex;
   align-items: center;
   gap: 0.35rem;
   flex-wrap: wrap;
 }
+
 .breadcrumbs a,
 .breadcrumbs span {
   color: var(--muted);
 }
+
 .breadcrumb-separator {
   color: var(--muted);
 }
 
 /* Patička */
+
 footer {
-  border-top: 1px solid #1d2632;
+  border-top: 2px solid var(--accent-red);
   color: var(--muted);
+  background: #06070b;
 }
+
 footer .wrap {
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px 16px;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 /* Přístupnost */
+
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -149,21 +216,32 @@ footer .wrap {
   height: 1px;
   overflow: hidden;
 }
+
 .skip-link:focus {
   position: static;
   width: auto;
   height: auto;
-  padding: 8px;
-  background: #fff;
+  padding: 8px 12px;
+  background: var(--accent);
   color: #000;
+  font-weight: 600;
 }
 
 /* Responsivní úpravy */
+
 @media (max-width: 880px) {
-  .grid { flex-direction: column; }
-  .aside { width: 100%; flex: none; }
+  .grid {
+    flex-direction: column;
+  }
+
+  .aside {
+    width: 100%;
+    flex: none;
+  }
 }
+
 /* Obecné rozložení pro vnitřní stránky */
+
 .page {
   max-width: 1200px;
   margin: 24px auto;
@@ -171,16 +249,28 @@ footer .wrap {
 }
 
 /* Panel / box – lze použít i na jiných stránkách */
+
 .panel {
   padding: 24px;
+  border-left: 3px solid var(--accent-red);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
 }
 
 /* Uvítací box na novinkách */
+
 .news-intro h2 {
   margin-top: 0;
 }
 
 /* Mřížka článků – dva sloupce */
+
 .articles-grid {
   margin-top: 24px;
   display: grid;
@@ -189,29 +279,38 @@ footer .wrap {
 }
 
 /* Karta článku */
+
 .news-card {
   padding: 16px;
 }
+
 .news-card h3 {
   margin-top: 0;
   font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-red);
 }
+
 .news-card time {
   display: block;
   color: var(--muted);
   font-size: 0.9rem;
   margin-bottom: 6px;
 }
+
 .news-card p {
   color: var(--muted);
 }
 
 /* Responsivní chování – na menších displejích 1 sloupec */
+
 @media (max-width: 880px) {
   .articles-grid {
     grid-template-columns: 1fr;
   }
 }
+
 /* ===== ČLÁNKY – DETAIL ===== */
 
 .article-page {
@@ -224,8 +323,11 @@ footer .wrap {
 }
 
 .article-title {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   margin: 0 0 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
 }
 
 .article-meta {
@@ -235,9 +337,10 @@ footer .wrap {
 }
 
 .article-summary {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   margin: 0;
+  color: var(--accent-red);
 }
 
 .article-body {
@@ -251,12 +354,14 @@ footer .wrap {
 }
 
 /* Menší obrazovky – trochu zmenšit nadpis */
+
 @media (max-width: 600px) {
   .article-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
-/* ===== ADMINISTRATIVA – LAYOUT V RÁMCI SLOŽKY ===== */
+
+/* ===== SLOŽKY – layout v rámci složky (Administrativa, ISB, IMIN, Army, Navy, Air, COMPForce, STC) ===== */
 
 .section-layout {
   display: flex;
@@ -265,77 +370,101 @@ footer .wrap {
 }
 
 /* Levý sloupec – navigace v rámci složky */
+
 .section-nav {
   width: 260px;
   flex: 0 0 260px;
   padding: 16px;
 }
+
 .section-nav h2 {
   margin-top: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
 }
+
 .section-nav ul {
   list-style: none;
   padding: 0;
   margin: 12px 0 0 0;
 }
+
 .section-nav li + li {
   margin-top: 6px;
 }
+
 .section-nav a {
   display: block;
-  padding: 6px 8px;
-  border-radius: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
   color: var(--text);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
+
 .section-nav a:hover {
-  background: #0e141d;
+  background: #090b11;
 }
+
 .section-nav a[aria-current="page"] {
-  background: #0e141d;
+  background: #090b11;
   border: 1px solid var(--accent);
 }
 
 /* Pravý obsahový box */
+
 .section-main {
   flex: 1 1 auto;
 }
 
 /* Vývěsní tabule – boxy oznámení */
+
 .notice-grid {
   margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
 }
+
 .notice-card {
   padding: 16px;
 }
+
 .notice-card h3 {
   margin-top: 0;
   font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-red);
 }
+
 .notice-card time {
   display: block;
   color: var(--muted);
   font-size: 0.9rem;
   margin-bottom: 6px;
 }
+
 .notice-card p {
   color: var(--muted);
 }
 
 /* Struktura – obrázek a dvousloupcové boxy */
+
 .structure-figure {
   margin: 20px 0;
 }
+
 .structure-figure img {
   width: 100%;
   border-radius: 10px;
-  border: 1px solid #1d2632;
+  border: 1px solid #2a313f;
 }
+
 .structure-figure figcaption {
   font-size: 0.9rem;
   color: var(--muted);
@@ -352,87 +481,106 @@ footer .wrap {
 .admin-box {
   padding: 16px;
 }
+
 .admin-box h4 {
   margin-top: 0;
   font-size: 1.02rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent-red);
 }
+
 .admin-box p {
   color: var(--muted);
   margin-bottom: 0;
 }
 
 /* Responsivní úpravy – na menších displejích pod sebe */
+
 @media (max-width: 880px) {
   .section-layout {
     flex-direction: column;
   }
+
   .section-nav {
     width: 100%;
     flex: none;
   }
+
   .structure-grid {
     grid-template-columns: 1fr;
   }
 }
+
 /* === Laws – specifické styly pro zákony a přehledy === */
 
 .laws-page {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .laws-intro {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .laws-intro a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .laws-topics {
-    display: grid;
-    gap: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
 }
 
 @media (min-width: 900px) {
-    .laws-topics {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .laws-topics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .law-topic h2 {
-    margin-top: 0;
-    font-size: 1.25rem;
+  margin-top: 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
 }
 
 .law-topic p {
-    margin-bottom: 0;
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 /* Plný zákoník */
 
 .law-code {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .law-section h2 {
-    margin-top: 0;
-    font-size: 1.3rem;
+  margin-top: 0;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
 }
 
 .law-article + .law-article {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .law-article h3 {
-    margin-bottom: 0.25rem;
-    font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-red);
 }
 
 .law-article p {
-    margin: 0 0 0.25rem 0;
-    line-height: 1.5;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.55;
 }
