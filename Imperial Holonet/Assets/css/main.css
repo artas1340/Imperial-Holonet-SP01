@@ -1,14 +1,12 @@
 :root {
-  /* Imperiální paleta */
-  --bg: #050608;          /* hlavní pozadí – skoro černé */
-  --panel: #111319;       /* panely / boxy */
-  --text: #e5e5e5;        /* hlavní text */
-  --muted: #a0a4b0;       /* utlumený text */
-  --accent: #d4af37;      /* zlatá – akcent */
-  --accent-red: #8b0000;  /* tmavě červená – imperiální linka */
+  --bg: #050608;          
+  --panel: #111319;       
+  --text: #e5e5e5;        
+  --muted: #a0a4b0;       
+  --accent: #d4af37;      
+  --accent-red: #8b0000;  
 }
 
-/* Reset a základ */
 * {
   box-sizing: border-box;
 }
@@ -27,7 +25,6 @@ body {
   line-height: 1.6;
 }
 
-/* Odkazy */
 
 a {
   color: var(--accent);
@@ -39,7 +36,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Hlavička (horní lišta) */
 
 header {
   background: #06070b;
@@ -95,7 +91,6 @@ nav ul li a:hover {
   color: var(--accent);
 }
 
-/* Layout */
 
 main {
   max-width: 1200px;
@@ -109,7 +104,6 @@ main {
   align-items: flex-start;
 }
 
-/* Levý aside – např. výpis článků */
 
 .aside {
   width: 320px;
@@ -117,7 +111,6 @@ main {
   padding: 16px;
 }
 
-/* Společné panely / boxy */
 
 .content,
 .panel,
@@ -158,7 +151,6 @@ main {
   padding: 24px;
 }
 
-/* Jednotný vzhled karet (tmavší uvnitř panelů) */
 
 .article-card,
 .news-card,
@@ -169,7 +161,6 @@ main {
   border: 1px solid #262c38;
 }
 
-/* Drobečková navigace */
 
 .breadcrumbs {
   color: var(--muted);
@@ -190,7 +181,6 @@ main {
   color: var(--muted);
 }
 
-/* Patička */
 
 footer {
   border-top: 2px solid var(--accent-red);
@@ -206,7 +196,6 @@ footer .wrap {
   font-size: 0.9rem;
 }
 
-/* Přístupnost */
 
 .skip-link {
   position: absolute;
@@ -227,7 +216,6 @@ footer .wrap {
   font-weight: 600;
 }
 
-/* Responsivní úpravy */
 
 @media (max-width: 880px) {
   .grid {
@@ -240,7 +228,6 @@ footer .wrap {
   }
 }
 
-/* Obecné rozložení pro vnitřní stránky */
 
 .page {
   max-width: 1200px;
@@ -248,7 +235,6 @@ footer .wrap {
   padding: 0 16px;
 }
 
-/* Panel / box – lze použít i na jiných stránkách */
 
 .panel {
   padding: 24px;
@@ -263,13 +249,11 @@ footer .wrap {
   color: var(--accent);
 }
 
-/* Uvítací box na novinkách */
 
 .news-intro h2 {
   margin-top: 0;
 }
 
-/* Mřížka článků – dva sloupce */
 
 .articles-grid {
   margin-top: 24px;
@@ -278,7 +262,6 @@ footer .wrap {
   gap: 16px;
 }
 
-/* Karta článku */
 
 .news-card {
   padding: 16px;
@@ -303,7 +286,6 @@ footer .wrap {
   color: var(--muted);
 }
 
-/* Responsivní chování – na menších displejích 1 sloupec */
 
 @media (max-width: 880px) {
   .articles-grid {
@@ -311,7 +293,6 @@ footer .wrap {
   }
 }
 
-/* ===== ČLÁNKY – DETAIL ===== */
 
 .article-page {
   max-width: 900px;
@@ -353,7 +334,6 @@ footer .wrap {
   text-align: justify;
 }
 
-/* Menší obrazovky – trochu zmenšit nadpis */
 
 @media (max-width: 600px) {
   .article-title {
@@ -361,7 +341,6 @@ footer .wrap {
   }
 }
 
-/* ===== SLOŽKY – layout v rámci složky (Administrativa, ISB, IMIN, Army, Navy, Air, COMPForce, STC) ===== */
 
 .section-layout {
   display: flex;
@@ -369,7 +348,6 @@ footer .wrap {
   align-items: flex-start;
 }
 
-/* Levý sloupec – navigace v rámci složky */
 
 .section-nav {
   width: 260px;
@@ -415,13 +393,11 @@ footer .wrap {
   border: 1px solid var(--accent);
 }
 
-/* Pravý obsahový box */
 
 .section-main {
   flex: 1 1 auto;
 }
 
-/* Vývěsní tabule – boxy oznámení */
 
 .notice-grid {
   margin-top: 16px;
@@ -452,8 +428,6 @@ footer .wrap {
 .notice-card p {
   color: var(--muted);
 }
-
-/* Struktura – obrázek a dvousloupcové boxy */
 
 .structure-figure {
   margin: 20px 0;
@@ -495,8 +469,6 @@ footer .wrap {
   margin-bottom: 0;
 }
 
-/* Responsivní úpravy – na menších displejích pod sebe */
-
 @media (max-width: 880px) {
   .section-layout {
     flex-direction: column;
@@ -511,8 +483,6 @@ footer .wrap {
     grid-template-columns: 1fr;
   }
 }
-
-/* === Laws – specifické styly pro zákony a přehledy === */
 
 .laws-page {
   display: flex;
@@ -551,8 +521,6 @@ footer .wrap {
   margin-bottom: 0;
   color: var(--muted);
 }
-
-/* Plný zákoník */
 
 .law-code {
   display: flex;
