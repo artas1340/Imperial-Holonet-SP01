@@ -584,3 +584,28 @@ footer .wrap {
   margin: 0 0 0.35rem 0;
   line-height: 1.55;
 }
+
+@media print {
+  header,
+  nav,
+  footer,
+  .section-nav {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .panel,
+  .content,
+  .article-body,
+  .laws-page,
+  .law-code {
+    background: #ffffff !important;
+    border: none !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+}
